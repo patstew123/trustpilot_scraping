@@ -84,11 +84,3 @@ new_dataframe['Provided_Response'] = np.where(new_dataframe['G_response'].isnull
 new_dataframe['Verbatim_Binary'] = np.where(new_dataframe['Verbatim'].isnull(),0,1)
 new_dataframe['Response_Binary'] = np.where(new_dataframe['G_response'].isnull(),0,1)
 new_dataframe['Good_Review'] = np.where(new_dataframe['Star_ratings'] >= 4, "Yes","No")
-
-filepath = Path('0 combining data/trustpilot_data.csv')
-new_dataframe.to_csv(filepath, index=False)
-
-
-
-
-
